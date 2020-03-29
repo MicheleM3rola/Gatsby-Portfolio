@@ -3,6 +3,7 @@ import Layout from "../component/layout"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import "./blog.scss"
 import Head from "../component/head"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
@@ -13,6 +14,9 @@ const BlogPage = () => {
             title
             slug
             publishDate(fromNow: true)
+            body {
+              json
+            }
           }
         }
       }
@@ -22,7 +26,7 @@ const BlogPage = () => {
   return (
     <Layout>
       <Head title="Blog" />
-      <h1 className="titleBlog">Dev Blog</h1>
+      <h2>Dev Blog</h2>
 
       <ul className="post-list">
         {data.allContentfulBlogPost.edges.map(post => (
@@ -30,6 +34,9 @@ const BlogPage = () => {
             <h3>
               <Link to={`/blog/${post.node.slug}`}>{post.node.title}</Link>
             </h3>
+            <div className="bodyPost">
+              {documentToReactComponents(post.node.body.json)}
+            </div>
             <p>{post.node.publishDate}</p>
           </li>
         ))}
