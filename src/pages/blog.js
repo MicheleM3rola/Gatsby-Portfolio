@@ -36,9 +36,9 @@ const BlogPage = () => {
             <h3>
               <Link to={`/blog/${post.node.slug}`}>{post.node.title}</Link>
             </h3>
-
-            <img src={post.node.image.fluid.src} alt="Post Image" />
-
+            <div className="bodyPost">
+              <img src={post.node.image.fluid.src} alt="Post Image" />
+            </div>
             <p>{post.node.subtitle}</p>
           </li>
         ))}

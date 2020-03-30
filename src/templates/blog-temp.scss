@@ -1,0 +1,17 @@
+.content-container {
+  width: 750px;
+  margin: auto;
+  h1 {
+    padding: 30px;
+    letter-spacing: 0.2rem;
+  }
+  .content-post {
+    padding: 15px;
+
+    p {
+      line-height: 2rem;
+      letter-spacing: 0.2rem;
+      text-align: justify;
+    }
+  }
+}

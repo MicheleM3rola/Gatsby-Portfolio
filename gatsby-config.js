@@ -22,6 +22,13 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "asset",
+        path: `${__dirname}/src/`,
+      },
+    },
 
     `gatsby-transformer-sharp`,
     {
@@ -66,7 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Press Start 2P`, `source sans pro\:300,400,400i,700`],
+        fonts: [`Montserrat`, `cursive`],
         display: "swap",
       },
     },

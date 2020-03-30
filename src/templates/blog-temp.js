@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../component/layout"
 import Head from "../component/head"
-
+import "./blog-temp.scss"
 //export const query = graphql`
 
 {
@@ -46,12 +46,15 @@ const BlogTemplate = props => {
   return (
     <Layout>
       <Head title={props.data.contentfulBlogPost.title} />
-      <h1>{props.data.contentfulBlogPost.title}</h1>
-
-      {documentToReactComponents(
-        props.data.contentfulBlogPost.content.json,
-        options
-      )}
+      <div className="content-container">
+        <h1>{props.data.contentfulBlogPost.title}</h1>
+        <div className="content-post">
+          {documentToReactComponents(
+            props.data.contentfulBlogPost.content.json,
+            options
+          )}
+        </div>
+      </div>
     </Layout>
   )
 }
