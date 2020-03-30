@@ -10,7 +10,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Portfolio",
+    title: "Looking for a title",
     author: "Michele Merola",
   },
   plugins: [
@@ -22,6 +22,8 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -55,7 +57,6 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              width: 500,
               linkImagesToOriginal: false,
             },
           },

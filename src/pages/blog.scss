@@ -10,11 +10,12 @@
   margin: 1rem 0;
   background: #f4f4f4;
   padding: 1rem;
-  height: auto;
+
+  width: 400px;
 
   .bodyPost {
     padding: 20px;
-    overflow: hidden;
+    height: 300px;
   }
 
   a {
