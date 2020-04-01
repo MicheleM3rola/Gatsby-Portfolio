@@ -1,0 +1,32 @@
+.bio-container {
+  display: flex;
+  justify-content: center;
+  .cont-bio {
+    width: 750px;
+    height: auto;
+    border-top: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    .cont-img {
+      width: 80px;
+      height: auto;
+      padding-top: 5px;
+
+      img {
+        margin-bottom: 0;
+        border-radius: 50px;
+        border: 1px solid blue;
+      }
+    }
+    .cont-paragraph {
+      text-align: justify;
+      padding: 5px;
+
+      p {
+        font-family: "Montserrat";
+      }
+    }
+  }
+}

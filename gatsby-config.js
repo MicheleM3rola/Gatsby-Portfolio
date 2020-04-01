@@ -10,7 +10,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Looking for a title",
+    title: "DevHub with Mike",
     author: "Michele Merola",
   },
   plugins: [
@@ -25,20 +25,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "asset",
-        path: `${__dirname}/src/`,
+        name: "images",
+        path: `${__dirname}/src/images/`,
       },
     },
 
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
-      },
-    },
+
+    `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -73,7 +68,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Montserrat`, `cursive`],
+        fonts: [`Liu Jian Mao Cao`, `cursive`, `Roboto Mono\:400`, `monospace`],
         display: "swap",
       },
     },

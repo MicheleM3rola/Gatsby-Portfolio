@@ -33,13 +33,17 @@ const BlogPage = () => {
       <ul className="post-list">
         {data.allContentfulBlogPost.edges.map(post => (
           <li className="post">
-            <h3>
-              <Link to={`/blog/${post.node.slug}`}>{post.node.title}</Link>
-            </h3>
-            <div className="bodyPost">
-              <img src={post.node.image.fluid.src} alt="Post Image" />
-            </div>
-            <p>{post.node.subtitle}</p>
+            <Link to={`/blog/${post.node.slug}`}>
+              <div>
+                <h3>{post.node.title}</h3>
+              </div>
+              <div className="bodyPost">
+                <img src={post.node.image.fluid.src} alt="Post Image" />
+              </div>
+              <div>
+                <p>{post.node.subtitle}</p>
+              </div>
+            </Link>
           </li>
         ))}
       </ul>
