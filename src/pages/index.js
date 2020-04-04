@@ -8,7 +8,7 @@ import "./indexes.scss"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "index.jpg" }) {
+      file(relativePath: { eq: "images/frontPage.jpg" }) {
         childImageSharp {
           fluid {
             src
@@ -34,6 +34,7 @@ const IndexPage = () => {
         <img
           src={data.file.childImageSharp.fluid.src}
           className="img-container"
+          alt="laptop"
         />
       </div>
     </Layout>
