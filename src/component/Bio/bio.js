@@ -25,7 +25,7 @@ const Bio = () => {
           <p>
             Hi my name is Michele I live in Western Australia and I am the
             creator of this blog, made it to improve my coding and writing
-            skills
+            skills.
           </p>
         </div>
       </div>

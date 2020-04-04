@@ -1,65 +1,72 @@
 import React from "react"
 
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 import headerStyle from "./header.module.scss"
 
-const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Header = ({ title, tempBlogLocation }) => {
   return (
     <div>
       <header className={headerStyle.header}>
         <h1>
           <Link to="/" className={headerStyle.title}>
-            {data.site.siteMetadata.title}
+            {title}
           </Link>
         </h1>
         <nav>
           <ul className={headerStyle.navList}>
-            <li>
-              <Link
-                to="/"
-                className={headerStyle.navItem}
-                activeClassName={headerStyle.activeNavItem}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                className={headerStyle.navItem}
-                activeClassName={headerStyle.activeNavItem}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/utility"
-                className={headerStyle.navItem}
-                activeClassName={headerStyle.activeNavItem}
-              >
-                Utility/Tools
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className={headerStyle.navItem}
-                activeClassName={headerStyle.activeNavItem}
-              >
-                Blog
-              </Link>
-            </li>
+            {!tempBlogLocation ? (
+              <>
+                <li>
+                  <Link
+                    to="/"
+                    className={headerStyle.navItem}
+                    activeClassName={headerStyle.activeNavItem}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/about"
+                    className={headerStyle.navItem}
+                    activeClassName={headerStyle.activeNavItem}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/projects"
+                    className={headerStyle.navItem}
+                    activeClassName={headerStyle.activeNavItem}
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/blog"
+                    className={headerStyle.navItem}
+                    activeClassName={headerStyle.activeNavItem}
+                  >
+                    Blog
+                  </Link>
+                </li>{" "}
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link
+                    to="/blog"
+                    className={headerStyle.navItemBlog}
+                    activeClassName={headerStyle.activeNavItem}
+                  >
+                    {tempBlogLocation ? " ← Back To The Blog" : "Home"}
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
         </nav>
       </header>

@@ -10,7 +10,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "DevHub with Mike",
+    title: "Mike DevHub",
+
     author: "Michele Merola",
   },
   plugins: [
@@ -68,7 +69,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Liu Jian Mao Cao`, `cursive`, `Roboto Mono\:400`, `monospace`],
+        fonts: [
+          `Liu Jian Mao Cao`,
+          `cursive`,
+          `Roboto Mono\:400`,
+          `monospace`,
+          `Nunito\:300`,
+        ],
         display: "swap",
       },
     },

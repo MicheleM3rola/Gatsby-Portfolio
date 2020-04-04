@@ -3,9 +3,8 @@ import Layout from "../component/layout"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import "./blog.scss"
 import Head from "../component/head"
-import Img from "gatsby-image"
 
-const BlogPage = () => {
+const BlogPage = props => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulBlogPost(sort: { order: DESC }) {
@@ -26,9 +25,8 @@ const BlogPage = () => {
   `)
 
   return (
-    <Layout>
+    <Layout title="Michele Dev Blog">
       <Head title="Blog" />
-      <h2>Dev Blog</h2>
 
       <ul className="post-list">
         {data.allContentfulBlogPost.edges.map(post => (
@@ -38,7 +36,7 @@ const BlogPage = () => {
                 <h3>{post.node.title}</h3>
               </div>
               <div className="bodyPost">
-                <img src={post.node.image.fluid.src} alt="Post Image" />
+                <img src={post.node.image.fluid.src} alt="Post" />
               </div>
               <div>
                 <p>{post.node.subtitle}</p>

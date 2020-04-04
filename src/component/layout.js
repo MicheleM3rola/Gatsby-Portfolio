@@ -1,16 +1,18 @@
 import React from "react"
 import Header from "./header"
+
 import Footer from "./footer"
+
 import layoutStyles from "./layout.module.scss"
 import "../styles/index.scss"
 
-const Layout = props => {
+const Layout = ({ children, title, tempBlogLocation }) => {
   return (
     <div className={layoutStyles.container}>
       <div>
-        <Header />
+        <Header title={title} tempBlogLocation={tempBlogLocation} />
       </div>
-      <div className={layoutStyles.contentChildren}>{props.children}</div>
+      <div className={layoutStyles.contentChildren}>{children}</div>
       <Footer />
     </div>
   )

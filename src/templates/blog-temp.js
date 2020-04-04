@@ -45,7 +45,7 @@ const BlogTemplate = props => {
     },
   }
   return (
-    <Layout>
+    <Layout title="Michele Merola" tempBlogLocation="/blog/">
       <Head title={props.data.contentfulBlogPost.title} />
       <div className="content-container">
         <h1>{props.data.contentfulBlogPost.title}</h1>
@@ -55,8 +55,8 @@ const BlogTemplate = props => {
             options
           )}
         </div>
+        <Bio />
       </div>
-      <Bio />
     </Layout>
   )
 }

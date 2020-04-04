@@ -1,16 +1,18 @@
 .bio-container {
   display: flex;
   justify-content: center;
+  width: 850px;
+  height: auto;
+  border-top: 1px solid lightseagreen;
+
   .cont-bio {
-    width: 750px;
-    height: auto;
-    border-top: 1px solid blue;
     display: flex;
     flex-direction: row;
     justify-content: start;
+    padding: 8px;
 
     .cont-img {
-      width: 80px;
+      width: 100px;
       height: auto;
       padding-top: 5px;
 
@@ -23,9 +25,14 @@
     .cont-paragraph {
       text-align: justify;
       padding: 5px;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       p {
         font-family: "Montserrat";
+        margin: 0;
       }
     }
   }
