@@ -18,12 +18,11 @@
   cursor: pointer;
 
   .bodyPost {
-    padding: 20px;
+    padding: 10px;
     width: auto;
-    height: auto;
 
-    img {
-      width: 200px;
+    .blogImg {
+      width: auto;
       height: 200px;
     }
   }
@@ -32,8 +31,8 @@
     text-decoration: none;
     color: darken($color: #000000, $amount: 0);
   }
-  h3 {
-    margin-bottom: 0;
+  .title-post {
+    padding: 1rem;
   }
 
   p {

@@ -32,11 +32,15 @@ const BlogPage = props => {
         {data.allContentfulBlogPost.edges.map(post => (
           <li className="post">
             <Link to={`/blog/${post.node.slug}`}>
-              <div>
-                <h3>{post.node.title}</h3>
-              </div>
               <div className="bodyPost">
-                <img src={post.node.image.fluid.src} alt="Post" />
+                <img
+                  src={post.node.image.fluid.src}
+                  alt="Post"
+                  className="blogImg"
+                />
+              </div>
+              <div>
+                <h3 className="title-post">{post.node.title}</h3>
               </div>
               <div>
                 <p>{post.node.subtitle}</p>
