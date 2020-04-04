@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+
 import Layout from "../component/layout"
 import Head from "../component/head"
 import "./indexes.scss"
@@ -11,7 +11,7 @@ const IndexPage = () => {
       file(relativePath: { eq: "index.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            src
           }
         }
       }
@@ -30,9 +30,11 @@ const IndexPage = () => {
             <li className="name-two">Web-developer</li>
           </ul>
         </div>
-        <div className="img-container">
-          <Img fluid={data.file.childImageSharp.fluid} />
-        </div>
+
+        <img
+          src={data.file.childImageSharp.fluid.src}
+          className="img-container"
+        />
       </div>
     </Layout>
   )
