@@ -1,23 +1,16 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../component/layout"
 import Head from "../component/head"
 import "./indexes.scss"
 
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "images/frontPage.jpg" }) {
-        childImageSharp {
-          fluid {
-            src
-          }
-        }
-      }
-    }
-  `)
-
+const IndexPage = ({ data }) => {
+  const {
+    file: {
+      childImageSharp: { fluid },
+    },
+  } = data
   return (
     <Layout title="Welcome to my Portfolio">
       <Head title="Home" />
@@ -31,13 +24,21 @@ const IndexPage = () => {
           </ul>
         </div>
 
-        <img
-          src={data.file.childImageSharp.fluid.src}
-          className="img-container"
-          alt="laptop"
-        />
+        <Img fluid={fluid} className="img-container" alt="laptop" />
       </div>
     </Layout>
   )
 }
+
+export const data = graphql`
+  query {
+    file(relativePath: { eq: "images/FrontPage.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 export default IndexPage

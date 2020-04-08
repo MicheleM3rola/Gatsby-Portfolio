@@ -2,7 +2,7 @@
   padding: 1rem 0 1rem;
 
   .title {
-    color: blueviolet;
+    color: lightseagreen;
     font-size: 3rem;
     text-decoration: none;
     font-family: "Nunito", sans-serif;
@@ -14,6 +14,19 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 50px;
+
+    .blogList {
+      padding: 10px;
+      border-radius: 10%;
+      transition: background-color 0.5s ease-in;
+
+      .nav-itemBlog {
+        font-size: 1rem;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        color: #d1cac7;
+      }
+    }
   }
 }
 
@@ -25,16 +38,8 @@
   font-family: "Nunito", sans-serif;
 }
 
-.nav-itemBlog {
-  font-size: 1rem;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  color: lightseagreen;
-  opacity: 0.5;
-}
-
-.nav-itemBlog:hover {
-  opacity: 0.9;
+.blogList:hover {
+  background-color: chocolate;
 }
 
 .nav-item:hover {

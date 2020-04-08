@@ -56,7 +56,7 @@ const Header = ({ title, tempBlogLocation }) => {
               </>
             ) : (
               <>
-                <li>
+                <li className={headerStyle.blogList}>
                   <Link
                     to="/blog"
                     className={headerStyle.navItemBlog}

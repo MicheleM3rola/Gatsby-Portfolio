@@ -15,6 +15,7 @@ const Bio = () => {
       }
     }
   `)
+
   return (
     <div className="bio-container">
       <div className="cont-bio">
