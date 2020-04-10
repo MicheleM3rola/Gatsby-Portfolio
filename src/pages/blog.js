@@ -35,7 +35,7 @@ const BlogPage = ({ data }) => {
 }
 
 export const data = graphql`
-  {
+  query {
     allContentfulBlogPost(sort: { order: DESC }) {
       nodes {
         title
