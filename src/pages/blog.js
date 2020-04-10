@@ -1,49 +1,30 @@
 import React from "react"
 import Layout from "../component/layout"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import Img from "gatsby-image"
+import { graphql, Link } from "gatsby"
 import "./blog.scss"
 import Head from "../component/head"
 
-const BlogPage = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulBlogPost(sort: { order: DESC }) {
-        edges {
-          node {
-            title
-            slug
-            subtitle
-            image {
-              fluid {
-                src
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
+const BlogPage = ({ data }) => {
+  const {
+    allContentfulBlogPost: { nodes },
+  } = data
   return (
     <Layout title="Michele Dev Blog">
       <Head title="Blog" />
 
       <ul className="post-list">
-        {data.allContentfulBlogPost.edges.map(post => (
+        {nodes.map(({ title, slug, subtitle, image: { fluid } }) => (
           <li className="post">
-            <Link to={`/blog/${post.node.slug}`}>
+            <Link to={`/blog/${slug}`}>
               <div className="bodyPost">
-                <img
-                  src={post.node.image.fluid.src}
-                  alt="Post"
-                  className="blogImg"
-                />
+                <Img fluid={fluid} alt="Post" className="blogImg" />
               </div>
               <div>
-                <h3 className="title-post">{post.node.title}</h3>
+                <h3 className="title-post">{title}</h3>
               </div>
               <div>
-                <p>{post.node.subtitle}</p>
+                <p>{subtitle}</p>
               </div>
             </Link>
           </li>
@@ -52,5 +33,22 @@ const BlogPage = props => {
     </Layout>
   )
 }
+
+export const data = graphql`
+  {
+    allContentfulBlogPost(sort: { order: DESC }) {
+      nodes {
+        title
+        slug
+        subtitle
+        image {
+          fluid {
+            ...GatsbyContentfulFluid
+          }
+        }
+      }
+    }
+  }
+`
 
 export default BlogPage

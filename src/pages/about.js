@@ -6,7 +6,7 @@ import Head from "../component/head"
 import "./about.scss"
 
 const AboutPage = () => {
-  const data = useStaticQuery(graphql`
+  const about = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "images/Michele.jpg" }) {
         childImageSharp {
@@ -23,7 +23,7 @@ const AboutPage = () => {
       <Head title="About" />
       <div className="about-container">
         <div className="aboutImg">
-          <Img fluid={data.file.childImageSharp.fluid} className="imgComp" />
+          <Img fluid={about.file.childImageSharp.fluid} className="imgComp" />
         </div>
         <div className="paragraph-content">
           <p>

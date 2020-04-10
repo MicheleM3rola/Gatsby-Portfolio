@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import "./bio.scss"
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
+  const imgBio = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "images/Michele.jpg" }) {
         childImageSharp {
@@ -20,7 +20,7 @@ const Bio = () => {
     <div className="bio-container">
       <div className="cont-bio">
         <div className="cont-img">
-          <Img fluid={data.file.childImageSharp.fluid} />
+          <Img fluid={imgBio.file.childImageSharp.fluid} />
         </div>
         <div className="cont-paragraph">
           <p>

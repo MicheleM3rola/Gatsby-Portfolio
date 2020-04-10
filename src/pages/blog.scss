@@ -19,11 +19,12 @@
 
   .bodyPost {
     padding: 10px;
-    width: auto;
+    width: 100%;
+    height: 300px;
 
     .blogImg {
-      width: auto;
-      height: 200px;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -33,12 +34,13 @@
   }
   .title-post {
     padding: 1rem;
+    font-family: "Nunito", sans-serif;
   }
 
   p {
     color: #777777;
     font-size: 0.8rem;
-    font-style: italic;
+    font-family: "Nunito", sans-serif;
   }
 }
 

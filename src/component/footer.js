@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import "./footer.scss"
 
 const Footer = () => {
-  const data = useStaticQuery(graphql`
+  const author = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        Created by {data.site.siteMetadata.author} all copyright reserved 2020
+        Created by {author.site.siteMetadata.author} all copyright reserved 2020
       </p>
     </footer>
   )

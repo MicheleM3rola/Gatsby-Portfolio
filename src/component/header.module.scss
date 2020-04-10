@@ -18,14 +18,18 @@
     .blogList {
       padding: 10px;
       border-radius: 10%;
-      transition: background-color 0.5s ease-in;
+      transition: background-color 0.3s ease-in;
 
-      .nav-itemBlog {
+      .navItemBlog {
         font-size: 1rem;
         text-decoration: none;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Nunito", sans-serif;
         color: #d1cac7;
+        transition: color 0.3s ease-in;
       }
+    }
+    .navItemBlog:hover {
+      color: white;
     }
   }
 }
