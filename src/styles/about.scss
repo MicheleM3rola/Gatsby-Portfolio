@@ -1,27 +1,7 @@
 .about-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 80%;
   margin: auto;
-
-  .aboutImg {
-    width: 15%;
-    height: 15%;
-
-    .imgComp {
-      border-radius: 50%;
-      border: 1px solid blueviolet;
-    }
-  }
-
-  .paragraph-content {
-    padding: 5%;
-
-    .first-word {
-      font-size: 4rem;
-      font-style: italic;
-      font-weight: 800px;
-    }
-  }
 }

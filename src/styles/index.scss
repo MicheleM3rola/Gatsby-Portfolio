@@ -5,6 +5,24 @@ html {
 
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  background-position: 400%;
+  animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
 }
 body {
   margin: 0;

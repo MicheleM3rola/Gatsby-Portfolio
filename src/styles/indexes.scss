@@ -3,29 +3,22 @@
   flex-direction: row;
   justify-content: center;
 
-  .title-cont {
-    width: 30%;
-    margin-top: 8%;
+  .container-title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    .typical {
+      width: 100%;
+      text-align: start;
+      font-size: 1.5rem;
+      font-family: "Nunito", sans-serif;
+    }
 
     .title {
-      list-style: none;
-
-      .name {
-        font-family: "Nunito", sans-serif;
-        color: chocolate;
-        font-size: 3rem;
-        font-weight: bold;
-        padding: 1.3rem;
-        text-align: center;
-      }
-      .name-two {
-        font-family: "Nunito", sans-serif;
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: start;
-      }
+      color: chocolate;
+      font-family: "Nunito", sans-serif;
     }
   }
 

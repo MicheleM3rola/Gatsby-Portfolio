@@ -1,0 +1,29 @@
+.container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid black;
+
+  .aboutImg {
+    width: 20%;
+    height: 20%;
+
+    .imgComp {
+      border-radius: 50%;
+      border: 1px solid blueviolet;
+    }
+  }
+
+  .paragraph-content {
+    padding: 5%;
+    font-family: "Nunito", sans-serif;
+
+    .first-word {
+      font-size: 4rem;
+
+      font-weight: 800px;
+      font-family: "Nunito", sans-serif;
+    }
+  }
+}
