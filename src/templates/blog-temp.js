@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import Layout from "../component/layout"
+import Layout from "../component/layout/layout"
 import Head from "../component/head"
 import Bio from "../component/Bio/bio"
-import "./blog-temp.scss"
+import "../styles/blog-temp.scss"
 //export const query = graphql`
 
 {

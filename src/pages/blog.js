@@ -1,8 +1,8 @@
 import React from "react"
-import Layout from "../component/layout"
+import Layout from "../component/layout/layout"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
-import "./blog.scss"
+import "../styles/blog.scss"
 import Head from "../component/head"
 
 const BlogPage = ({ data }) => {

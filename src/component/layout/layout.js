@@ -1,10 +1,10 @@
 import React from "react"
-import Header from "./header"
+import Header from "../header/header"
 
-import Footer from "./footer"
+import Footer from "../footer/footer"
 
 import layoutStyles from "./layout.module.scss"
-import "../styles/index.scss"
+import "../../styles/index.scss"
 
 const Layout = ({ children, title, tempBlogLocation }) => {
   return (

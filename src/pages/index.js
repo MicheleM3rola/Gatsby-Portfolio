@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import Layout from "../component/layout"
+import Layout from "../component/layout/layout"
 import Head from "../component/head"
-import "./indexes.scss"
+import "../styles/indexes.scss"
 
 const IndexPage = ({ data }) => {
   const {
