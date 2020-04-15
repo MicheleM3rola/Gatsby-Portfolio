@@ -1,17 +1,38 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../component/layout/layout"
 import Head from "../component/head"
+import SocialIcon from "../component/social icon/social-icon"
 import Typical from "react-typical"
+import { useStaticQuery, graphql } from "gatsby"
 import "../styles/indexes.scss"
 
-const IndexPage = ({ data }) => {
-  const {
-    file: {
-      childImageSharp: { fluid },
-    },
-  } = data
+const IndexPage = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "images/Twitter.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      facebook: file(relativePath: { eq: "images/Facebook.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      linkdin: file(relativePath: { eq: "images/Linkdin.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout title="Welcome to my Portfolio">
       <Head title="Home" />
@@ -36,22 +57,16 @@ const IndexPage = ({ data }) => {
               ]}
             />
           </p>
+          <SocialIcon social="Twitter" icon={data} />
         </div>
-        <Img fluid={fluid} className="img-container" alt="laptop" />
+
+        <div>
+          <SocialIcon social="Linkedin" />
+          <SocialIcon social="Facebook" />
+        </div>
       </div>
     </Layout>
   )
 }
 
-export const data = graphql`
-  query {
-    file(relativePath: { eq: "images/HomePic.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 export default IndexPage

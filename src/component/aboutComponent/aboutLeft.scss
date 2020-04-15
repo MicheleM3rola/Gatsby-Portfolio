@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid black;
+  border-right: 1px solid orange;
 
   .aboutImg {
     width: 20%;
@@ -11,13 +11,14 @@
 
     .imgComp {
       border-radius: 50%;
-      border: 1px solid blueviolet;
+      border: 1px solid orange;
     }
   }
 
   .paragraph-content {
     padding: 5%;
     font-family: "Nunito", sans-serif;
+    color: whitesmoke;
 
     .first-word {
       font-size: 4rem;

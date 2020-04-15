@@ -2,7 +2,7 @@
   padding: 1rem 0 1rem;
 
   .title {
-    color: lightseagreen;
+    color: whitesmoke;
     font-size: 3rem;
     text-decoration: none;
     font-family: "Nunito", sans-serif;
@@ -35,8 +35,9 @@
 }
 
 .nav-item {
-  color: #999999;
-  font-size: 1.2rem;
+  color: orange;
+  font-weight: bold;
+  font-size: 1.5rem;
   margin-right: 1.3rem;
   text-decoration: none;
   font-family: "Nunito", sans-serif;
@@ -51,5 +52,5 @@
 }
 
 .active-nav-item {
-  color: #333333;
+  color: whitesmoke;
 }
