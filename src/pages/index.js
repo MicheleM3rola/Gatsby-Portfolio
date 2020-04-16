@@ -3,36 +3,10 @@ import Layout from "../component/layout/layout"
 import Head from "../component/head"
 import SocialIcon from "../component/social icon/social-icon"
 import Typical from "react-typical"
-import { useStaticQuery, graphql } from "gatsby"
+
 import "../styles/indexes.scss"
 
-const IndexPage = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "images/Twitter.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      facebook: file(relativePath: { eq: "images/Facebook.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      linkdin: file(relativePath: { eq: "images/Linkdin.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
+const IndexPage = () => {
   return (
     <Layout title="Welcome to my Portfolio">
       <Head title="Home" />
@@ -57,12 +31,12 @@ const IndexPage = props => {
               ]}
             />
           </p>
-          <SocialIcon social="Twitter" icon={data} />
+          <SocialIcon social="Twitter" id="Tw" />
         </div>
 
         <div>
-          <SocialIcon social="Linkedin" />
-          <SocialIcon social="Facebook" />
+          <SocialIcon social="Linkedin" id="Lk" />
+          <SocialIcon social="Facebook" id="Fb" />
         </div>
       </div>
     </Layout>
