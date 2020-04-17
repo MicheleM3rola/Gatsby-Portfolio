@@ -1,24 +1,26 @@
 .post-list {
   list-style: none;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
 }
 
 .post {
-  margin: 1rem 0;
+  margin: auto;
   transition: box-shadow 0.5s ease;
   padding: 1rem;
-  width: 350px;
+  display: flex;
+  flex-direction: row;
+
   background-color: white;
   border-radius: 50px;
   cursor: pointer;
 
   .bodyPost {
     padding: 10px;
-    width: 100%;
-    height: 300px;
+    width: 150px;
+    height: 150px;
 
     .blogImg {
       width: 100%;
@@ -30,23 +32,26 @@
     text-decoration: none;
     color: darken($color: #000000, $amount: 0);
   }
-  .title-post {
-    padding: 1rem;
-    font-family: "Nunito", sans-serif;
-  }
 
-  p {
-    color: #777777;
-    font-size: 0.8rem;
-    font-family: "Nunito", sans-serif;
+  .cont-data {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title-post {
+      font-family: "Nunito", sans-serif;
+      text-align: start;
+    }
+
+    p {
+      color: #777777;
+      font-size: 0.8rem;
+      font-family: "Nunito", sans-serif;
+      text-align: start;
+    }
   }
 }
 
 .post:hover {
   box-shadow: 4px 10px 15px 0px orange;
-}
-
-.title-blog {
-  font-family: "Roboto Mono", monospace;
-  font-size: 2rem;
 }

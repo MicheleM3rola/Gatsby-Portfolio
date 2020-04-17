@@ -16,17 +16,15 @@ const BlogPage = ({ data }) => {
       <ul className="post-list">
         {nodes.map(({ title, slug, subtitle, image: { fluid } }) => (
           <li className="post">
-            <Link to={`/blog/${slug}`}>
-              <div className="bodyPost">
-                <Img fluid={fluid} alt="Post" className="blogImg" />
-              </div>
-              <div>
+            <div className="bodyPost">
+              <Img fluid={fluid} alt="Post" className="blogImg" />
+            </div>
+            <div className="cont-data">
+              <Link to={`/blog/${slug}`}>
                 <h3 className="title-post">{title}</h3>
-              </div>
-              <div>
-                <p>{subtitle}</p>
-              </div>
-            </Link>
+              </Link>
+              <p>{subtitle}</p>
+            </div>
           </li>
         ))}
       </ul>
