@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import "./social-icon.scss"
 
-const SocialIcon = ({ social, id }) => {
+const SocialIcon = ({ social, id, ph, link }) => {
   const data = useStaticQuery(graphql`
     query {
       twitter: file(relativePath: { eq: "images/Twitter.png" }) {
@@ -41,8 +41,10 @@ const SocialIcon = ({ social, id }) => {
             <Img fluid={data.linkdin.childImageSharp.fluid} className="size" />
           )}
         </div>
-        <h1>{social}</h1>
-        <p>Visit My twitter profile</p>
+        <a href={link} target="__blank">
+          {social}
+        </a>
+        <p>{ph}</p>
       </div>
     </div>
   )

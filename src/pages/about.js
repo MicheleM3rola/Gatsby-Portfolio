@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import AboutLeft from "../component/aboutComponent/aboutLeft"
+import SkillList from "../component/skillList/skillList"
 import Layout from "../component/layout/layout"
 import Head from "../component/head"
 import "../styles/about.scss"
@@ -18,11 +19,24 @@ const AboutPage = () => {
     }
   `)
 
+  const [checkSkill, setCheckSkill] = useState(false)
+
+  const onClick = () => {
+    return setCheckSkill(checkSkill => !checkSkill)
+  }
+
+  console.log(checkSkill)
   return (
     <Layout title="Who am I">
-      <Head title="About" />
+      <Head titlePage="About" />
       <div className="about-container">
         <AboutLeft image={about.file.childImageSharp.fluid} />
+        <SkillList showSkill={checkSkill} />
+      </div>
+      <div className="btn-cont">
+        <button onClick={onClick} className="button">
+          {checkSkill ? "Reset" : "Check My Skills"}
+        </button>
       </div>
     </Layout>
   )

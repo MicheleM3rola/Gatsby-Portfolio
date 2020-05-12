@@ -1,11 +1,12 @@
 import React from "react"
 import Layout from "../component/layout/layout"
 import Head from "../component/head"
+import ProjectDirectory from "../component/projectDirectory/ProjectDirectory"
 
 const Projects = () => (
   <Layout title="My Works">
-    <Head title="Projects" />
-    <h3>My Projects here</h3>
+    <Head titlePage="Projects" />
+    <ProjectDirectory />
   </Layout>
 )
 

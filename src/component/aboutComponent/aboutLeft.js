@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import "./aboutLeft.scss"
 const AboutLeft = ({ image }) => {
   return (
@@ -17,11 +17,11 @@ const AboutLeft = ({ image }) => {
           everyone has it, but the main reason is because I think it will help
           me to learn better tracking my works. You can read more about me in my
           first{" "}
-          <Link to="/blog/contentful" className="blogPost">
+          <AniLink fade to="/blog/contentful" className="blogPost">
             Blog Post
-          </Link>{" "}
+          </AniLink>{" "}
           and also just next to my presentation you can find my expertise coding
-          related and social.
+          related.
         </p>
       </div>
     </div>

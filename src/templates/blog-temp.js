@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+
 import Layout from "../component/layout/layout"
 import Head from "../component/head"
 import Bio from "../component/Bio/bio"
@@ -47,6 +48,7 @@ const BlogTemplate = props => {
   return (
     <Layout title="Michele Merola" tempBlogLocation="/blog/">
       <Head title={props.data.contentfulBlogPost.title} />
+
       <div className="content-container">
         <h1>{props.data.contentfulBlogPost.title}</h1>
         <div className="content-post">

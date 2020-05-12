@@ -1,0 +1,24 @@
+.wrapperList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .container-skills {
+    list-style: none;
+    margin-top: 60px auto;
+    width: 65%;
+    overflow-y: scroll;
+    height: 500px;
+  }
+
+  .container-skills::-webkit-scrollbar {
+    width: 6px;
+    background-color: white;
+    border-radius: 20px;
+  }
+  .container-skills::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 20px;
+  }
+}

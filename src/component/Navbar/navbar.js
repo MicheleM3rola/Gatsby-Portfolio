@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import headerStyle from "../header/header.module.scss"
 import links from "../../constants/link"
 
@@ -11,26 +11,28 @@ const NavBar = ({ tempBlogLocation }) => {
           links.map(({ name, path }) => (
             <>
               <li>
-                <Link
+                <AniLink
+                  fade
                   to={path}
                   className={headerStyle.navItem}
                   activeClassName={headerStyle.activeNavItem}
                 >
                   {name}
-                </Link>
+                </AniLink>
               </li>
             </>
           ))
         ) : (
           <>
             <li className={headerStyle.blogList}>
-              <Link
+              <AniLink
+                fade
                 to="/blog"
                 className={headerStyle.navItemBlog}
                 activeClassName={headerStyle.activeNavItem}
               >
                 ← Back To The Blog
-              </Link>
+              </AniLink>
             </li>
           </>
         )}

@@ -11,11 +11,17 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Mike DevHub",
-
+    description:
+      "Michele Merola Portfolio with an integrated blog where he talks about his progress during his jurney in web development.",
+    twitterUsername: "@MicheleMerola15",
     author: "Michele Merola",
+    image: "./src/images/Michele.jpg",
+    siteUrl: "https://michele-portfolio.netlify.app/",
   },
   plugins: [
     "gatsby-plugin-sass",
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: "gatsby-source-filesystem",
       options: {

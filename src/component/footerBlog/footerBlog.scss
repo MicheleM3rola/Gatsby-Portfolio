@@ -1,0 +1,35 @@
+.ft {
+  margin-top: 6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .list-icons {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    .icons {
+      width: 50px;
+      height: 50px;
+      padding: 8px;
+      cursor: pointer;
+      transition: transform 0.5s ease-in-out;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.icons:hover {
+  transform: scale(1.5);
+}

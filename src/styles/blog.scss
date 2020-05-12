@@ -2,7 +2,7 @@
   list-style: none;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   text-align: center;
 }
 
@@ -12,14 +12,13 @@
   padding: 1rem;
   display: flex;
   flex-direction: row;
-
-  background-color: white;
-  border-radius: 50px;
+  align-items: center;
+  //border-radius: 50px;
   cursor: pointer;
 
   .bodyPost {
     padding: 10px;
-    width: 150px;
+    width: 200px;
     height: 150px;
 
     .blogImg {
@@ -41,17 +40,15 @@
     .title-post {
       font-family: "Nunito", sans-serif;
       text-align: start;
+      color: orange;
+      font-size: 2.5rem;
     }
 
     p {
-      color: #777777;
-      font-size: 0.8rem;
+      color: white;
+      font-size: 1rem;
       font-family: "Nunito", sans-serif;
       text-align: start;
     }
   }
-}
-
-.post:hover {
-  box-shadow: 4px 10px 15px 0px orange;
 }

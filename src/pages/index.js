@@ -9,7 +9,7 @@ import "../styles/indexes.scss"
 const IndexPage = () => {
   return (
     <Layout title="Welcome to my Portfolio">
-      <Head title="Home" />
+      <Head titlePage="Home" />
       <div className="container">
         <div className="container-title">
           <h1 className="title">Hi my name is Michele Merola</h1>
@@ -31,12 +31,27 @@ const IndexPage = () => {
               ]}
             />
           </p>
-          <SocialIcon social="Twitter" id="Tw" />
+          <SocialIcon
+            social="Twitter"
+            id="Tw"
+            ph="Visit My twitter profile"
+            link="https://twitter.com/MicheleMerola15"
+          />
         </div>
 
         <div>
-          <SocialIcon social="Linkedin" id="Lk" />
-          <SocialIcon social="Facebook" id="Fb" />
+          <SocialIcon
+            social="Linkedin"
+            id="Lk"
+            ph="Visit My Linkedin profile"
+            link="https://www.linkedin.com/in/michele-merola/"
+          />
+          <SocialIcon
+            social="Facebook"
+            id="Fb"
+            ph="Visit My Facebook profile"
+            link="https://www.facebook.com/merolasalvatore/"
+          />
         </div>
       </div>
     </Layout>

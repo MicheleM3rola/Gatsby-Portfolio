@@ -1,9 +1,27 @@
 footer {
-  margin-top: 3rem;
+  margin-top: 6rem;
   font-size: 1rem;
   font-weight: bold;
   font-family: "Nunito", sans-serif;
-  height: 200px;
+  border-top: 5px solid white;
+  box-shadow: -1px 0px 18px 4px white;
+  border-radius: 40px 40px 0px 0px;
+
   color: white;
-  //background-color: #faf9f8;
+
+  p {
+    margin-top: 50px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .cont-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 40px;
+
+    h1 {
+      text-align: start;
+    }
+  }
 }
