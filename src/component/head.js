@@ -27,7 +27,7 @@ const Head = ({ titlePage, descriptionFromPage }) => {
     image,
     siteUrl,
     twitterUsername,
-  } = data.site.siteMetadata
+  } = helmet.site.siteMetadata
 
   return (
     <Helmet

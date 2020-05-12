@@ -6,10 +6,10 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import "../styles/blog.scss"
 import Head from "../component/head"
 
-const BlogPage = ({ data }) => {
+const BlogPage = props => {
   const {
     posts: { nodes },
-  } = data
+  } = props.data
   return (
     <Layout title="Michele Dev Blog" locationFooter="/blog">
       <Head titlePage="Blog" />
@@ -38,11 +38,11 @@ const BlogPage = ({ data }) => {
 }
 
 export const data = graphql`
-  query($skip: Int!, $limit: Int!) {
+  query getPost($skip: Int!, $limit: Int!) {
     posts: allContentfulBlogPost(
       skip: $skip
       limit: $limit
-      sort: { order: DESC }
+      sort: { order: DESC, fields: publishDate }
     ) {
       nodes {
         title
