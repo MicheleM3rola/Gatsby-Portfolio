@@ -37,6 +37,14 @@ const ContainerInput = styled.div`
     border-radius: 15px;
     border: 1px solid orange;
   }
+
+  @media only screen and (max-width: 430px) {
+    flex-direction: column;
+
+    .input {
+      width: 90%;
+    }
+  }
 `
 
 export default Input

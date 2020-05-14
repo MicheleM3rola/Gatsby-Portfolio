@@ -68,6 +68,19 @@ const FormStyle = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 430px) {
+    .form-control {
+      justify-content: center;
+      .ctn-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .btn-form {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
 `
 
 export default Form

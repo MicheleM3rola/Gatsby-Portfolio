@@ -20,9 +20,9 @@ const IndexPage = () => {
               loop={Infinity}
               wrapper="b"
               steps={[
-                "Developer",
+                " Web Developer",
                 2000,
-                "Gamer",
+                "Dream Chaser",
                 2000,
                 "Father",
                 2000,

@@ -55,3 +55,14 @@
   color: whitesmoke;
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 430px) {
+  .nav-list {
+    width: 90%;
+    margin: auto;
+
+    .nav-item {
+      font-size: 1.2rem;
+    }
+  }
+}

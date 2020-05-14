@@ -30,6 +30,14 @@ const ContText = styled.div`
     border-radius: 15px;
     border: 2px solid orange;
   }
+
+  @media only screen and (max-width: 430px) {
+    flex-direction: column;
+    textarea {
+      width: 90%;
+      margin-right: 0px;
+    }
+  }
 `
 
 export default Text

@@ -25,3 +25,21 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 430px) {
+  footer {
+    margin-top: 3rem;
+    p {
+      margin-top: 20px;
+    }
+    .cont-form {
+      grid-template-columns: 1fr;
+      align-items: center;
+
+      h1 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

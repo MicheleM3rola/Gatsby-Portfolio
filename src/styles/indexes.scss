@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gridjustify-content: center;
+  justify-content: center;
 
   .container-title {
     display: flex;
@@ -27,5 +27,21 @@
     width: 20%;
     height: 20%;
     box-shadow: 20px -6px 28px -5px rgba(0, 0, 0, 0.75);
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .container {
+    grid-template-columns: 1fr;
+    .container-title {
+      align-items: center;
+
+      .typical {
+        font-size: 1.2rem;
+      }
+      .title {
+        font-size: 2.3rem;
+      }
+    }
   }
 }
