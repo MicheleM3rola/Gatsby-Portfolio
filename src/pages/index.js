@@ -39,7 +39,7 @@ const IndexPage = () => {
           />
         </div>
 
-        <div>
+        <div className="secondContSocialIcon">
           <SocialIcon
             social="Linkedin"
             id="Lk"

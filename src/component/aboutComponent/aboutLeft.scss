@@ -36,3 +36,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 430px) {
+  .container-left {
+    border-right: none;
+
+    .aboutImg {
+      width: 30%;
+      height: 30%;
+    }
+  }
+}

@@ -64,7 +64,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     height: 150px;
     margin-top: 10px;
+
+    .inner {
+      width: 250px;
+      clip-path: circle(30%);
+      background-color: #ffe53b;
+      background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+      background-size: 400% 400%;
+      background-position: 400%;
+      animation: gradient 4s ease infinite;
+
+      .cont-img {
+        padding-bottom: 15px;
+
+        .size {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+
+    a {
+      font-size: 1.5rem;
+    }
+    p {
+      visibility: hidden;
+    }
   }
 }

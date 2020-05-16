@@ -15,7 +15,7 @@ module.exports = {
       "Michele Merola Portfolio with an integrated blog where he talks about his progress during his jurney in web development.",
     twitterUsername: "@MicheleMerola15",
     author: "Michele Merola",
-    image: "./src/images/Michele.jpg",
+    image: "/Michele.jpg",
     siteUrl: "https://michele-portfolio.netlify.app/",
   },
   plugins: [
