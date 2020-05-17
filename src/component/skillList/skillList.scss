@@ -22,11 +22,12 @@
     border-radius: 20px;
   }
 }
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 530px) {
   .wrapperList {
     width: 100%;
     .container-skills {
-      width: 100%;
+      width: 90%;
+      margin: auto;
     }
   }
 }

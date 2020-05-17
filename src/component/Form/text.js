@@ -31,7 +31,7 @@ const ContText = styled.div`
     border: 2px solid orange;
   }
 
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 530px) {
     flex-direction: column;
     textarea {
       width: 90%;

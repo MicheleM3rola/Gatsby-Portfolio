@@ -16,8 +16,8 @@ const Footer = () => {
   return (
     <footer>
       <div className="cont-form">
-        <Form />
         <h1>Let's Work Together</h1>
+        <Form />
       </div>
       <p>
         Created by {author.site.siteMetadata.author} all copyright reserved 2020

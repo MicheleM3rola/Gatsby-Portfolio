@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import AboutLeft from "../component/aboutComponent/aboutLeft"
 import SkillList from "../component/skillList/skillList"
 import Layout from "../component/layout/layout"
-import Head from "../component/head"
+import SEO from "../component/SEO"
 import "../styles/about.scss"
 
 const AboutPage = () => {
@@ -28,7 +28,7 @@ const AboutPage = () => {
   console.log(checkSkill)
   return (
     <Layout title="Who am I">
-      <Head titlePage="About" />
+      <SEO titlePage="About" />
       <div className="about-container">
         <AboutLeft image={about.file.childImageSharp.fluid} />
         <SkillList showSkill={checkSkill} />

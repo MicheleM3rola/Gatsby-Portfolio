@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../component/layout/layout"
-import Head from "../component/head"
+import SEO from "../component/SEO"
 import SocialIcon from "../component/social icon/social-icon"
 import Typical from "react-typical"
 
@@ -9,7 +9,7 @@ import "../styles/indexes.scss"
 const IndexPage = () => {
   return (
     <Layout title="Welcome to my Portfolio">
-      <Head titlePage="Home" />
+      <SEO titlePage="Home" />
       <div className="container">
         <div className="container-title">
           <h1 className="title">Hi my name is Michele Merola</h1>

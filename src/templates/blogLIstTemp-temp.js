@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../component/layout/layout"
-import Head from "../component/head"
+import SEO from "../component/SEO"
 import BlogPost from "../component/blog/blogPost"
 import { graphql } from "gatsby"
 
@@ -13,7 +13,7 @@ const BlogListTemplate = props => {
 
   return (
     <Layout title="Michele Dev Blog" locationFooter="/blog">
-      <Head titlePage="Blog" />
+      <SEO titlePage="Blog" />
       <div>
         <ul className="post-list">
           {data.posts.nodes.map(node => (

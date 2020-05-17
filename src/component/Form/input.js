@@ -38,7 +38,7 @@ const ContainerInput = styled.div`
     border: 1px solid orange;
   }
 
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 530px) {
     flex-direction: column;
 
     .input {

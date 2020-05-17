@@ -47,8 +47,7 @@ const FormStyle = styled.div`
   .form-control {
     display: flex;
     flex-direction: column;
-
-    padding: 20px;
+    width: 70%;
     .ctn-btn {
       text-align: center;
       .btn-form {
@@ -68,9 +67,10 @@ const FormStyle = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 430px) {
+  @media only screen and (max-width: 530px) {
     .form-control {
       justify-content: center;
+      margin: auto;
       .ctn-btn {
         display: flex;
         flex-direction: row;

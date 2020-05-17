@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../component/layout/layout"
-import Head from "../component/head"
+import SEO from "../component/SEO"
 import ProjectDirectory from "../component/projectDirectory/ProjectDirectory"
 
 const Projects = () => (
   <Layout title="My Works">
-    <Head titlePage="Projects" />
+    <SEO titlePage="Projects" />
     <ProjectDirectory />
   </Layout>
 )

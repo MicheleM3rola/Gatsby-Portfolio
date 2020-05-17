@@ -20,3 +20,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 530px) {
+  .content-container {
+    width: 90%;
+
+    .content-post {
+      p {
+        line-height: normal;
+        letter-spacing: normal;
+      }
+    }
+  }
+}
