@@ -21,7 +21,7 @@ footer {
     margin-top: 40px;
 
     h1 {
-      text-align: end;
+      text-align: center;
     }
   }
 }
@@ -37,8 +37,24 @@ footer {
       align-items: center;
 
       h1 {
-        text-align: center;
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 530px) and(max-width: 1024px) {
+  footer {
+    margin-top: 3rem;
+    p {
+      margin-top: 20px;
+    }
+    .cont-form {
+      grid-template-columns: 1fr;
+      align-items: center;
+
+      h1 {
+        text-align: center;
+        font-size: 2rem;
       }
     }
   }

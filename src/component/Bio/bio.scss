@@ -54,3 +54,18 @@
     }
   }
 }
+
+@media only screen and (min-width: 531px) and(max-width: 1024px) {
+  .bio-container {
+    .cont-bio {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .cont-img {
+        width: 80px;
+      }
+    }
+  }
+}

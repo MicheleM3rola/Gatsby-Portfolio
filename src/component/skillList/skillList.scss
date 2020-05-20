@@ -31,3 +31,13 @@
     }
   }
 }
+
+@media only screen and (min-width: 530px) and(max-width: 1024px) {
+  .wrapperList {
+    width: 100%;
+    .container-skills {
+      width: 50%;
+      margin: auto;
+    }
+  }
+}

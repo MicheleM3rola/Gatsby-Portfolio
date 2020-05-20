@@ -26,15 +26,24 @@ const ContText = styled.div`
   textarea {
     margin-top: 10px;
     margin-right: 38px;
-    width: 50%;
+    width: 70%;
     border-radius: 15px;
     border: 2px solid orange;
   }
 
-  @media only screen and (max-width: 530px) {
+  @media (min-width: 320px) and (max-width: 530px) {
     flex-direction: column;
     textarea {
       width: 90%;
+      margin-right: 0px;
+    }
+  }
+
+  @media (min-width: 531px) and (max-width: 1024px) {
+    flex-direction: column;
+
+    textarea {
+      width: 60%;
       margin-right: 0px;
     }
   }

@@ -33,16 +33,25 @@ const ContainerInput = styled.div`
   .input {
     padding: 10px;
     margin: 10px;
-    width: 50%;
+    width: 70%;
     border-radius: 15px;
     border: 1px solid orange;
   }
 
-  @media only screen and (max-width: 530px) {
+  @media (min-width: 320px) and (max-width: 1024px) {
+    display: flex;
     flex-direction: column;
 
     .input {
       width: 90%;
+    }
+  }
+
+  @media (min-width: 531px) and (max-width: 1024px) {
+    flex-direction: column;
+
+    .input {
+      width: 60%;
     }
   }
 `
