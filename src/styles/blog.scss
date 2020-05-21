@@ -7,6 +7,7 @@
 }
 
 .post {
+  width: 80%;
   margin: auto;
   transition: box-shadow 0.5s ease;
   padding: 1rem;
@@ -33,6 +34,7 @@
   }
 
   .cont-data {
+    width: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -55,6 +57,29 @@
 }
 
 @media only screen and (max-width: 530px) {
+  ul {
+    margin-left: 0;
+  }
+  .post {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cont-data {
+      width: 100%;
+      .title-post {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 531px) and (max-width: 1024px) {
   ul {
     margin-left: 0;
   }
