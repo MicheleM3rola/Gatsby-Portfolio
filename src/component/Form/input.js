@@ -24,7 +24,7 @@ const ContainerInput = styled.div`
   align-items: center;
 
   label {
-    color: white;
+    color: black;
 
     font-family: "Nunito", sans-serif;
     font-weight: bold;

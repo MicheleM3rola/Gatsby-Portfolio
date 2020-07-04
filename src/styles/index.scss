@@ -5,17 +5,18 @@ html {
 
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background: #0f2027;
+  //background: #0f2027;
+  background-color: #f6f6f6;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to right, #000428, #004e92);
-  background-size: 400% 400%;
-  background-position: 400%;
-  animation: gradient 14s ease infinite;
+  //background: linear-gradient(to right, #000428, #004e92);
+  //background-size: 400% 400%;
+  //background-position: 400%;
+  //animation: gradient 14s ease infinite;
 }
 
 @keyframes gradient {
@@ -406,6 +407,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  color: black;
 }
 figure {
   margin-left: 0;

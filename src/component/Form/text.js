@@ -17,7 +17,7 @@ const ContText = styled.div`
   align-items: center;
 
   label {
-    color: white;
+    color: black;
     padding: 5px;
     font-family: "Nunito", sans-serif;
     font-weight: bold;

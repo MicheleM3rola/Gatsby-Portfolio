@@ -9,14 +9,14 @@ import "../styles/blog.scss"
 const BlogListTemplate = props => {
   const { data } = props
 
-  console.log(props)
+  console.log(data)
 
   return (
     <Layout title="Michele Dev Blog" locationFooter="/blog">
       <SEO titlePage="Blog" />
       <div>
-        <ul className="post-list">
-          {data.posts.nodes.map(node => (
+        <ul className="item-list">
+          {data.allContentfulBlogPost.nodes.map(node => (
             <li className="post">
               <BlogPost
                 title={node.title}
@@ -35,7 +35,7 @@ const BlogListTemplate = props => {
 
 export const data = graphql`
   query getPosts($skip: Int!, $limit: Int!) {
-    posts: allContentfulBlogPost(
+    allContentfulBlogPost(
       skip: $skip
       limit: $limit
       sort: { order: DESC, fields: publishDate }

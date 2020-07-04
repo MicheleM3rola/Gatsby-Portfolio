@@ -44,12 +44,12 @@ const SkillWrapper = styled.div`
     justify-content: space-between;
     .percentage {
       font-size: 1rem;
-      color: white;
+      color: black;
       font-weight: bold;
     }
     h3 {
       text-align: start;
-      color: white;
+      color: black;
       font-family: "Nunito", sans-serif;
     }
   }
