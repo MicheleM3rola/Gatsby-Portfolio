@@ -12,6 +12,7 @@ const ProjectDirectory = () => {
         nodes {
           title
           technologies
+          gatsbyLink
           description {
             json
           }
@@ -37,6 +38,7 @@ const ProjectDirectory = () => {
                 description={card.description.json}
                 tech={card.technologies}
                 link={card.link}
+                gitLink={card.gatsbyLink}
               />
             </ProjectCard>
           </li>

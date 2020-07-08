@@ -44,7 +44,7 @@
     }
   }
 
-  a {
+  .liveApp {
     text-decoration: none;
     color: orange;
     text-transform: uppercase;
@@ -54,10 +54,22 @@
     transition: background-color 0.4s ease-in-out;
   }
 
-  a:hover {
+  .liveApp:hover {
     color: white;
     background-color: orange;
     opacity: 1;
+  }
+
+  .gitIcon {
+    text-decoration: none;
+    color: orange;
+    margin-top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .gitIcon:hover {
+    color: white;
   }
 }
 .wrapperHover:hover {
