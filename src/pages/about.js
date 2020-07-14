@@ -25,7 +25,6 @@ const AboutPage = () => {
     return setCheckSkill(checkSkill => !checkSkill)
   }
 
-  console.log(checkSkill)
   return (
     <Layout title="Who am I">
       <SEO titlePage="About" />

@@ -9,8 +9,6 @@ import "../styles/blog.scss"
 const BlogListTemplate = props => {
   const { data } = props
 
-  console.log(data)
-
   return (
     <Layout title="Michele Dev Blog" locationFooter="/blog">
       <SEO titlePage="Blog" />
